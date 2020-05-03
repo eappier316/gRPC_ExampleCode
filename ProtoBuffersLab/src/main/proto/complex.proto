@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/duration.proto";
+
+
+package example.complex;
+
+message ComplexMessage {
+  DummyMessage one_dummy = 2;
+  repeated DummyMessage multiple_dummy = 3;
+
+  oneof measurement_units {
+    bool metric = 4;
+    bool standard = 5;
+  }
+
+  map<string, int32> result = 6;
+
+  google.protobuf.Timestamp my_field = 7;
+
+  google.protobuf.Duration validaty = 8;
+
+}
+
+message DummyMessage {
+  int32 id = 1;
+  string name = 2;
+}
