@@ -1,2 +1,4 @@
 # gRPC_ExampleCode
-This is code for an example gRPC project
+This code was created from a code class from Udemy Instructor Stephane Maarek.
+
+Please review his course for prerequiste set up instructions
